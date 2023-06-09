@@ -6,3 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+livekit = { git = "https://github.com/spiegela/client-sdk-rust.git", branch = "ivis" }
+livekit-webrtc = { git = "https://github.com/spiegela/client-sdk-rust.git", branch = "ivis" }
+livekit-api = { git = "https://github.com/spiegela/client-sdk-rust.git", branch = "ivis" }
+livekit-protocol = { git = "https://github.com/spiegela/client-sdk-rust.git", branch = "ivis" }
+tokio = { version = "1.28.0", features = ["full"] }
