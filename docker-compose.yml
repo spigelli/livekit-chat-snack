@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  livekit:
+    container_name: snack-livekit
+    image: livekit/livekit-server
+    restart: always
+    ports:
+      - 7880:7880
+      - 7881:7881
+      - 7882:7882/udp
+      - 443:443/udp
+    volumes:
+      - ./livekity.yml:/livekit.yml
+    command: --config=/livekit.yml
+    network_mode: host
+    depends_on:
+     - redis
+  redis:
+    container_name: snack-redis
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+    command: redis-server --save 20 1 --loglevel warning 
+    network_mode: host
