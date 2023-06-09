@@ -10,7 +10,7 @@ services:
       - 7882:7882/udp
       - 443:443/udp
     volumes:
-      - ./livekity.yml:/livekit.yml
+      - ./livekit.yml:/livekit.yml
     command: --config=/livekit.yml
     network_mode: host
     depends_on:
