@@ -17,6 +17,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             can_publish: true,
             can_publish_data: true,
             can_publish_sources: vec!["Camera".to_string(), "Microphone".to_string()],
+            hidden: true,
             can_update_own_metadata: true,
             room: room_name.to_string(),
             ..Default::default()

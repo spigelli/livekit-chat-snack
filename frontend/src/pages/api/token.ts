@@ -39,7 +39,7 @@ export default function handler(
     canSubscribe: true,
     canPublishData: true,
     canUpdateOwnMetadata: true,
-    hidden: true,
+    hidden: false,
     recorder: true,
   });
 
